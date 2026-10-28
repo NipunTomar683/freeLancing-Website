@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Find your next great collaboration on Orbit, the freelance network for ambitious people and independent talent."
+    />
+    <meta name="theme-color" content="#090b17" />
+    <title>Orbit — Make work move</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="#" aria-label="Orbit home">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 36 36" fill="none">
+              <circle cx="18" cy="18" r="13.5" stroke="currentColor" stroke-width="1.5" />
+              <ellipse cx="18" cy="18" rx="7" ry="15" transform="rotate(42 18 18)" stroke="currentColor" stroke-width="1.5" />
+              <circle cx="27.5" cy="9.5" r="3" fill="#b9a2ff" />
+            </svg>
+          </span>
+          <span>orbit<span class="brand-period">.</span></span>
+        </a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="#how-it-works">How it works</a>
+          <a href="#talent">For talent</a>
+          <a href="#clients">For clients</a>
+        </nav>
+
+        <div class="header-actions">
+          <button class="button button-quiet" data-auth="login" data-role="client">Log in</button>
+          <button class="button button-small button-light" data-auth="signup" data-role="client">
+            Join Orbit <span aria-hidden="true">↗</span>
+          </button>
+          <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">
+            <span></span><span></span>
+          </button>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero" aria-labelledby="hero-title">
+          <div class="hero-copy">
+            <div class="eyebrow"><span class="live-dot"></span> A better way to work together</div>
+            <h1 id="hero-title"><span class="headline-line">Good work</span><span class="headline-line">finds its <span class="gradient-text">orbit.</span></span></h1>
+            <p class="hero-description">
+              A world of independent talent, one good connection away. Find the people and projects
+              that move you forward.
+            </p>
+            <div class="hero-actions">
+              <button class="button button-primary" data-auth="signup" data-role="client">
+                Hire great talent <span class="arrow" aria-hidden="true">↗</span>
+              </button>
+              <button class="button button-outline" data-auth="signup" data-role="freelancer">
+                Find your next gig <span class="arrow" aria-hidden="true">↗</span>
+              </button>
+            </div>
+            <div class="proof-row">
+              <div class="avatar-stack" aria-hidden="true">
+                <span class="avatar avatar-one">J</span>
+                <span class="avatar avatar-two">M</span>
+                <span class="avatar avatar-three">A</span>
+                <span class="avatar avatar-four">S</span>
+              </div>
+              <p><strong>12k+</strong> independent minds<br /><span>already finding their flow</span></p>
+            </div>
+          </div>
+
+          <div class="hero-visual" aria-label="A preview of the Orbit freelance community">
+            <div class="orbit orbit-one"></div>
+            <div class="orbit orbit-two"></div>
+            <div class="orbit orbit-three"></div>
+            <div class="planet planet-large"></div>
+            <div class="planet planet-small"></div>
+            <div class="star star-one">✦</div>
+            <div class="star star-two">✧</div>
+            <div class="star star-three">✦</div>
+
+            <article class="talent-card glass-card">
+              <div class="card-topline">
+                <span class="availability"><span class="live-dot"></span> Available for work</span>
+                <button class="more-button" aria-label="More profile options">···</button>
+              </div>
+              <div class="profile-main">
+                <div class="profile-photo" role="img" aria-label="Portrait of Maya Chen"></div>
+                <div class="profile-name">
+                  <h2>Maya Chen <span class="verified" aria-label="Verified">✓</span></h2>
+                  <p>Product designer · Brooklyn, NY</p>
+                </div>
+              </div>
+              <p class="profile-blurb">I turn complex ideas into simple, human experiences.</p>
+              <div class="skill-list">
+                <span>Product design</span><span>Prototyping</span><span>Figma</span>
+              </div>
+              <div class="profile-footer">
+                <div class="rating"><span>★</span> 4.9 <small>(38 reviews)</small></div>
+                <div class="rate"><strong>$95</strong><span> / hour</span></div>
+              </div>
+            </article>
+
+            <div class="floating-note note-top glass-card">
+              <span class="note-icon note-icon-purple">↗</span>
+              <span><strong>New connection</strong><small>Good things start here</small></span>
+            </div>
+            <div class="floating-note note-bottom glass-card">
+              <span class="note-icon note-icon-peach">✳</span>
+              <span><strong>Made for momentum</strong><small>Work that works for you</small></span>
+            </div>
+          </div>
+          <div class="hero-glow" aria-hidden="true"></div>
+        </section>
+
+        <section class="trusted" aria-label="Community">
+          <p>GOOD WORK, WITH GOOD PEOPLE</p>
+          <div class="trusted-logos" aria-label="A community spanning leading companies">
+            <span class="wordmark wordmark-serif">northstar</span>
+            <span class="wordmark wordmark-wide">MOTION<span>®</span></span>
+            <span class="wordmark wordmark-serif italic">Forma</span>
+            <span class="wordmark wordmark-bold">MONO<span class="wordmark-dot">.</span></span>
+            <span class="wordmark wordmark-thin">sonder</span>
+          </div>
+        </section>
+
+        <section class="intro-section" id="how-it-works">
+          <div class="section-heading">
+            <p class="eyebrow">YOUR NEXT CHAPTER STARTS HERE</p>
+            <h2>Work should feel like<br /><span class="gradient-text">a good fit.</span></h2>
+          </div>
+          <p class="intro-copy">
+            Whether you’re building something new or building your career, Orbit brings the right
+            people together to make meaningful work happen.
+          </p>
+        </section>
+
+        <section class="audience-grid" aria-label="Explore Orbit">
+          <article class="audience-card client-card" id="clients">
+            <div class="audience-icon" aria-hidden="true">✳</div>
+            <p class="eyebrow">FOR TEAMS WITH A VISION</p>
+            <h3>Big idea.<br />Meet your people.</h3>
+            <p>Build your dream team with thoughtful, independent talent ready to make it real.</p>
+            <button class="text-link" data-auth="signup" data-role="client">Explore hiring <span>↗</span></button>
+            <div class="card-decoration client-decoration" aria-hidden="true"></div>
+          </article>
+          <article class="audience-card talent-audience-card" id="talent">
+            <div class="audience-icon" aria-hidden="true">✦</div>
+            <p class="eyebrow">FOR INDEPENDENT MINDS</p>
+            <h3>Your talent.<br />Your trajectory.</h3>
+            <p>Find work that values what you do—and gives you room to do more of it.</p>
+            <button class="text-link" data-auth="signup" data-role="freelancer">Explore freelancing <span>↗</span></button>
+            <div class="card-decoration talent-decoration" aria-hidden="true"></div>
+          </article>
+        </section>
+
+        <section class="closing-banner">
+          <div>
+            <p class="eyebrow">THE RIGHT PEOPLE CHANGE EVERYTHING</p>
+            <h2>Ready to find your orbit?</h2>
+          </div>
+          <div class="closing-actions">
+            <button class="button button-light" data-auth="signup" data-role="client">Get started <span class="arrow" aria-hidden="true">↗</span></button>
+            <button class="button button-quiet" data-auth="login" data-role="freelancer">Already a member? Log in</button>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <a class="brand" href="#" aria-label="Orbit home">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 36 36" fill="none">
+              <circle cx="18" cy="18" r="13.5" stroke="currentColor" stroke-width="1.5" />
+              <ellipse cx="18" cy="18" rx="7" ry="15" transform="rotate(42 18 18)" stroke="currentColor" stroke-width="1.5" />
+              <circle cx="27.5" cy="9.5" r="3" fill="#b9a2ff" />
+            </svg>
+          </span>
+          <span>orbit<span class="brand-period">.</span></span>
+        </a>
+        <p>Make work move. © 2026 Orbit Network.</p>
+        <div class="footer-links"><a href="#how-it-works">About</a><a href="#clients">For clients</a><a href="#talent">For talent</a></div>
+      </footer>
+    </div>
+
+    <dialog class="auth-dialog" aria-labelledby="auth-title">
+      <form method="dialog" class="dialog-close-form">
+        <button class="dialog-close" aria-label="Close dialog">×</button>
+      </form>
+      <div class="dialog-brand brand">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 36 36" fill="none">
+            <circle cx="18" cy="18" r="13.5" stroke="currentColor" stroke-width="1.5" />
+            <ellipse cx="18" cy="18" rx="7" ry="15" transform="rotate(42 18 18)" stroke="currentColor" stroke-width="1.5" />
+            <circle cx="27.5" cy="9.5" r="3" fill="#b9a2ff" />
+          </svg>
+        </span>
+        <span>orbit<span class="brand-period">.</span></span>
+      </div>
+      <p class="eyebrow dialog-eyebrow">YOUR NEXT CHAPTER STARTS HERE</p>
+      <h2 id="auth-title">Welcome to Orbit</h2>
+      <p class="dialog-description">Choose how you’d like to move forward.</p>
+      <div class="role-switch" role="group" aria-label="Choose your account type">
+        <button type="button" class="role-option is-selected" data-role-option="client">I’m a client</button>
+        <button type="button" class="role-option" data-role-option="freelancer">I’m a freelancer</button>
+      </div>
+      <div class="auth-mode">
+        <button type="button" class="mode-option is-selected" data-mode-option="signup">Create account</button>
+        <button type="button" class="mode-option" data-mode-option="login">Log in</button>
+      </div>
+      <form class="auth-form">
+        <label class="name-field">Full name<input name="name" autocomplete="name" placeholder="Your name" required /></label>
+        <label>Email address<input name="email" type="email" autocomplete="email" placeholder="you@example.com" required /></label>
+        <label>Password<input name="password" type="password" autocomplete="new-password" placeholder="At least 8 characters" minlength="8" required /></label>
+        <button class="button button-primary auth-submit" type="submit">Create client account <span class="arrow" aria-hidden="true">↗</span></button>
+      </form>
+      <p class="form-message" aria-live="polite"></p>
+      <p class="terms-note">By continuing, you agree to our Terms of Service and Privacy Policy.</p>
+    </dialog>
+  </body>
+</html>
