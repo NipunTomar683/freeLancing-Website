@@ -7,7 +7,7 @@
       name="description"
       content="Find your next great collaboration on Orbit, the freelance network for ambitious people and independent talent."
     />
-    <meta name="theme-color" content="#090b17" />
+    <meta name="theme-color" content="#07111f" />
     <title>Orbit — Make work move</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,9 +16,40 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="theme.css" />
     <script src="script.js" defer></script>
+    <script src="theme.js" defer></script>
   </head>
   <body>
+    <div class="intro-splash" aria-hidden="true">
+      <div class="cosmic-backdrop">
+        <span class="cosmic-nebula nebula-violet"></span>
+        <span class="cosmic-nebula nebula-cyan"></span>
+        <span class="cosmic-nebula nebula-rose"></span>
+        <span class="cosmic-orbit cosmic-orbit-one"><span class="cosmic-world"></span></span>
+        <span class="cosmic-orbit cosmic-orbit-two"><span class="cosmic-world"></span></span>
+        <span class="cosmic-orbit cosmic-orbit-three"><span class="cosmic-world"></span></span>
+        <span class="cosmic-star cosmic-star-one"></span>
+        <span class="cosmic-star cosmic-star-two"></span>
+        <span class="cosmic-star cosmic-star-three"></span>
+        <span class="cosmic-star cosmic-star-four"></span>
+        <span class="cosmic-star cosmic-star-five"></span>
+        <span class="cosmic-star cosmic-star-six"></span>
+      </div>
+      <div class="intro-center">
+        <div class="intro-brand">
+          <span class="intro-brand-mark">
+            <svg viewBox="0 0 36 36" fill="none">
+              <circle cx="18" cy="18" r="13.5" stroke="currentColor" stroke-width="1.5" />
+              <ellipse cx="18" cy="18" rx="7" ry="15" transform="rotate(42 18 18)" stroke="currentColor" stroke-width="1.5" />
+              <circle cx="27.5" cy="9.5" r="3" fill="#42b8c5" />
+            </svg>
+          </span>
+          <span>orbit<span class="brand-period">.</span></span>
+        </div>
+        <p class="intro-tagline">Good work, beyond the ordinary</p>
+      </div>
+    </div>
     <div class="page-shell">
       <header class="site-header">
         <a class="brand" href="#" aria-label="Orbit home">
@@ -26,7 +57,7 @@
             <svg viewBox="0 0 36 36" fill="none">
               <circle cx="18" cy="18" r="13.5" stroke="currentColor" stroke-width="1.5" />
               <ellipse cx="18" cy="18" rx="7" ry="15" transform="rotate(42 18 18)" stroke="currentColor" stroke-width="1.5" />
-              <circle cx="27.5" cy="9.5" r="3" fill="#b9a2ff" />
+              <circle cx="27.5" cy="9.5" r="3" fill="#42b8c5" />
             </svg>
           </span>
           <span>orbit<span class="brand-period">.</span></span>
@@ -39,6 +70,10 @@
         </nav>
 
         <div class="header-actions">
+          <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to light theme">
+            <span class="theme-toggle-icon" aria-hidden="true">☼</span>
+            <span class="theme-toggle-label">Light mode</span>
+          </button>
           <button class="button button-quiet" data-auth="login" data-role="client">Log in</button>
           <button class="button button-small button-light" data-auth="signup" data-role="client">
             Join Orbit <span aria-hidden="true">↗</span>
@@ -96,10 +131,8 @@
                 <div class="profile-photo" role="img" aria-label="Portrait of Maya Chen"></div>
                 <div class="profile-name">
                   <h2>Maya Chen <span class="verified" aria-label="Verified">✓</span></h2>
-                  <p>Product designer · Brooklyn, NY</p>
                 </div>
               </div>
-              <p class="profile-blurb">I turn complex ideas into simple, human experiences.</p>
               <div class="skill-list">
                 <span>Product design</span><span>Prototyping</span><span>Figma</span>
               </div>
@@ -110,7 +143,7 @@
             </article>
 
             <div class="floating-note note-top glass-card">
-              <span class="note-icon note-icon-purple">↗</span>
+              <span class="note-icon note-icon-teal">↗</span>
               <span><strong>New connection</strong><small>Good things start here</small></span>
             </div>
             <div class="floating-note note-bottom glass-card">
@@ -180,7 +213,7 @@
             <svg viewBox="0 0 36 36" fill="none">
               <circle cx="18" cy="18" r="13.5" stroke="currentColor" stroke-width="1.5" />
               <ellipse cx="18" cy="18" rx="7" ry="15" transform="rotate(42 18 18)" stroke="currentColor" stroke-width="1.5" />
-              <circle cx="27.5" cy="9.5" r="3" fill="#b9a2ff" />
+              <circle cx="27.5" cy="9.5" r="3" fill="#42b8c5" />
             </svg>
           </span>
           <span>orbit<span class="brand-period">.</span></span>
@@ -199,7 +232,7 @@
           <svg viewBox="0 0 36 36" fill="none">
             <circle cx="18" cy="18" r="13.5" stroke="currentColor" stroke-width="1.5" />
             <ellipse cx="18" cy="18" rx="7" ry="15" transform="rotate(42 18 18)" stroke="currentColor" stroke-width="1.5" />
-            <circle cx="27.5" cy="9.5" r="3" fill="#b9a2ff" />
+            <circle cx="27.5" cy="9.5" r="3" fill="#42b8c5" />
           </svg>
         </span>
         <span>orbit<span class="brand-period">.</span></span>

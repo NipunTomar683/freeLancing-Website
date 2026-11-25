@@ -2,3 +2,9 @@
 Thumbs.db
 *.swp
 *.swo
+node_modules/
+.env
+first.env
+*.db
+*.db-wal
+*.db-shm

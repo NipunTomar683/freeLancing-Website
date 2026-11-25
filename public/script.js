@@ -10,9 +10,12 @@ const modeOptions = [...document.querySelectorAll("[data-mode-option]")];
 const menuToggle = document.querySelector(".menu-toggle");
 const mainNav = document.querySelector(".main-nav");
 const heroVisual = document.querySelector(".hero-visual");
+const loginButton = document.querySelector('.header-actions [data-auth="login"]');
+const joinButton = document.querySelector('.header-actions [data-auth="signup"]');
 
 let selectedRole = "client";
 let selectedMode = "signup";
+let currentUser = null;
 
 function updateAuthDialog() {
   const roleName = selectedRole === "client" ? "client" : "freelancer";
@@ -33,6 +36,11 @@ function updateAuthDialog() {
 
 document.querySelectorAll("[data-auth]").forEach((button) => {
   button.addEventListener("click", () => {
+    if (currentUser) {
+      window.location.assign("/dashboard.html");
+      return;
+    }
+
     selectedRole = button.dataset.role;
     selectedMode = button.dataset.auth;
     updateAuthDialog();
@@ -54,10 +62,69 @@ modeOptions.forEach((option) => {
   });
 });
 
-authForm.addEventListener("submit", (event) => {
+authForm.addEventListener("submit", async (event) => {
   event.preventDefault();
-  formMessage.textContent = "Authentication isn't connected yet. No information was sent or stored.";
+
+  const isSignup = selectedMode === "signup";
+  const formData = new FormData(authForm);
+  const payload = {
+    email: formData.get("email"),
+    password: formData.get("password"),
+  };
+  if (isSignup) {
+    payload.name = formData.get("name");
+    payload.role = selectedRole;
+  }
+
+  authSubmit.disabled = true;
+  formMessage.textContent = "";
+
+  try {
+    let response;
+    try {
+      response = await fetch(isSignup ? "/api/signup" : "/api/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+    } catch {
+      formMessage.textContent = "Unable to reach Orbit. Please check your connection and try again.";
+      return;
+    }
+
+    let result;
+    try {
+      result = await response.json();
+    } catch {
+      formMessage.textContent = "Something went wrong. Please try again.";
+      return;
+    }
+
+    if (!response.ok) {
+      formMessage.textContent = result.error || "Unable to authenticate. Please try again.";
+      return;
+    }
+
+    window.location.assign("/dashboard.html");
+  } finally {
+    authSubmit.disabled = false;
+  }
 });
+
+fetch("/api/me")
+  .then((response) => {
+    if (!response.ok) return null;
+    return response.json();
+  })
+  .then((result) => {
+    if (!result?.user) return;
+    currentUser = result.user;
+    loginButton.hidden = true;
+    joinButton.textContent = "Dashboard";
+  })
+  .catch((error) => {
+    console.error("Could not check the current session.", error);
+  });
 
 menuToggle.addEventListener("click", () => {
   const isOpen = menuToggle.getAttribute("aria-expanded") === "true";

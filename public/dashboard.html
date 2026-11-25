@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#07111f" />
+    <title>Your Orbit — Orbit</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="dashboard.css" />
+    <link rel="stylesheet" href="theme.css" />
+    <script src="dashboard.js" defer></script>
+    <script src="theme.js" defer></script>
+  </head>
+  <body>
+    <main class="dashboard-card">
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to light theme">
+        <span class="theme-toggle-icon" aria-hidden="true">☼</span>
+        <span class="theme-toggle-label">Light mode</span>
+      </button>
+      <a class="brand" href="/" aria-label="Orbit home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 36 36" fill="none">
+            <circle cx="18" cy="18" r="13.5" stroke="currentColor" stroke-width="1.5" />
+            <ellipse cx="18" cy="18" rx="7" ry="15" transform="rotate(42 18 18)" stroke="currentColor" stroke-width="1.5" />
+            <circle cx="27.5" cy="9.5" r="3" fill="#42b8c5" />
+          </svg>
+        </span>
+        <span>orbit<span class="brand-period">.</span></span>
+      </a>
+      <p class="eyebrow">YOUR NEXT CHAPTER STARTS HERE</p>
+      <h1 id="welcome-message">Welcome</h1>
+      <p id="role-message" class="role-message"></p>
+      <div class="dashboard-actions">
+        <a class="button button-outline" href="/">Home</a>
+        <button class="button button-primary" id="logout-button" type="button">Log out</button>
+      </div>
+    </main>
+  </body>
+</html>
